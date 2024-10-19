@@ -5,7 +5,6 @@ def hosts_from_subnet_mask(subnet_mask):
     network = ipaddress.IPv4Network(f'0.0.0.0/{subnet_mask}', strict=False)
     return network.num_addresses - 2  # 2 adres network ve broadcast için
 
-# Örnek kullanım
 subnet_mask = 9  # /9 subnet maskını belirtiyoruz
 
 total_hosts = hosts_from_subnet_mask(subnet_mask)
